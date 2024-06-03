@@ -1,0 +1,148 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sun Apr  7 02:25:23 2024
+| Host         : lazyprata running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
+| Design       : main
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    77 |
+| Unused register locations in slices containing registers |   144 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            4 |
+|      4 |            1 |
+|      6 |            1 |
+|      8 |            7 |
+|     10 |            2 |
+|     12 |            3 |
+|     14 |            8 |
+|    16+ |           51 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            8366 |         1096 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             568 |           79 |
+| Yes          | No                    | No                     |             810 |          138 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             344 |           65 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------------------+----------------------------------------------------------+-----------------------------------------------------+------------------+----------------+
+|                      Clock Signal                      |                       Enable Signal                      |                   Set/Reset Signal                  | Slice Load Count | Bel Load Count |
++--------------------------------------------------------+----------------------------------------------------------+-----------------------------------------------------+------------------+----------------+
+| ~clock_6p25M_BUFG                                      |                                                          |                                                     |                1 |              2 |
+|  user_interface/score_display/slow_clock_960Hz/clk_960 |                                                          | user_interface/score_display/an_count[1]            |                1 |              2 |
+|  user_interface/score_display/slow_clock_960Hz/clk_960 |                                                          | user_interface/score_display/an[1]_i_1_n_0          |                1 |              2 |
+|  clk_IBUF_BUFG                                         | nolabel_line178/led[5]_i_1_n_0                           |                                                     |                1 |              2 |
+|  user_interface/score_display/slow_clock_960Hz/clk_960 |                                                          | user_interface/score_display/an_count[0]            |                1 |              4 |
+|  clk_90pix                                             |                                                          |                                                     |                2 |              6 |
+|  clk_IBUF_BUFG                                         | user_interface/shape_d_colour                            | user_interface/shape_d_colour[15]_i_1_n_0           |                2 |              8 |
+|  clk_90pix                                             |                                                          | user_interface/clear                                |                1 |              8 |
+|  clk_90pix                                             | user_interface/shapeD_ready_flag                         |                                                     |                4 |              8 |
+|  clk_IBUF_BUFG                                         |                                                          | user_interface/game_pixel_data[10]_i_1_n_0          |                2 |              8 |
+|  clk_20k_BUFG                                          | fft_0/stage_16/wait_for_sync0                            |                                                     |                1 |              8 |
+|  clk_IBUF_BUFG                                         | user_interface/FSM_sequential_interface_state[3]_i_1_n_0 |                                                     |                3 |              8 |
+|  clk_20k_BUFG                                          | fft_0/stage_16/HWBFLY.bfly/oaddr                         |                                                     |                1 |              8 |
+|  clk_20k_BUFG                                          | fft_0/stage_32/wait_for_sync0                            |                                                     |                1 |             10 |
+|  clk_20k_BUFG                                          | fft_0/stage_32/HWBFLY.bfly/oaddr                         |                                                     |                2 |             10 |
+|  clk_20k_BUFG                                          | fft_0/stage_64/HWBFLY.bfly/oaddr                         |                                                     |                1 |             12 |
+|  clk_IBUF_BUFG                                         | twentykhz/E[0]                                           | twentykhz/SS[0]                                     |                2 |             12 |
+|  clk_90pix                                             | user_interface/shapeD_ready_flag                         | user_interface/y_pos_c[5]_i_1_n_0                   |                5 |             12 |
+|  clk_IBUF_BUFG                                         |                                                          | oled/SR[0]                                          |                3 |             14 |
+|  clk_20k_BUFG                                          | fft_0/stage_128/wait_for_sync0                           |                                                     |                2 |             14 |
+|  clk_20k_BUFG                                          | fft_0/stage_128/HWBFLY.bfly/oaddr                        |                                                     |                2 |             14 |
+|  clk_IBUF_BUFG                                         | user_interface/generate_new0_4                           |                                                     |                2 |             14 |
+|  clk_IBUF_BUFG                                         | user_interface/generate_new0                             |                                                     |                3 |             14 |
+|  clk_IBUF_BUFG                                         | user_interface/generate_new0_3                           |                                                     |                2 |             14 |
+|  clk_IBUF_BUFG                                         | user_interface/generate_new0_5                           |                                                     |                3 |             14 |
+|  clk_90pix                                             | user_interface/shapeD_ready_flag                         | user_interface/y_pos_d[5]_i_1_n_0                   |                5 |             14 |
+|  clk_20k_BUFG                                          | fft_0/stage_256/HWBFLY.bfly/oaddr                        |                                                     |                2 |             16 |
+|  clk_20k_BUFG                                          | fft_0/stage_256/wait_for_sync0                           |                                                     |                2 |             16 |
+|  clk_20k_BUFG                                          | fft_0/stage_512/FWBFLY.bfly/oaddr                        |                                                     |                2 |             18 |
+|  clk_20k_BUFG                                          | fft_0/stage_64/wait_for_sync0                            |                                                     |                3 |             18 |
+|  user_interface/score_display/slow_clock_960Hz/clk_960 |                                                          |                                                     |                6 |             18 |
+|  clk_IBUF_BUFG                                         | clk_20k_BUFG                                             |                                                     |                3 |             18 |
+|  clk_20k_BUFG                                          | fft_0/stage_1024/FWBFLY.bfly/oaddr                       |                                                     |                2 |             20 |
+|  clk_IBUF_BUFG                                         | clk_20k_BUFG                                             | twentykhz/SR[0]                                     |                7 |             20 |
+|  clk_90pix                                             | user_interface/shapeD_ready_flag                         | user_interface/y_pos_a[5]_i_1_n_0                   |                5 |             20 |
+|  clk_IBUF_BUFG                                         | user_interface/shape_a_colour                            | user_interface/shape_a_colour[15]_i_1_n_0           |                3 |             22 |
+|  clk_IBUF_BUFG                                         | user_interface/shape_b_colour                            | user_interface/shape_b_colour[15]_i_1_n_0           |                2 |             22 |
+|  clk_20k_BUFG                                          | fft_0/stage_2/br_start                                   |                                                     |                4 |             22 |
+|  clk_90pix                                             | user_interface/shapeD_ready_flag                         | user_interface/y_pos_b[5]_i_1_n_0                   |                8 |             22 |
+|  clk_20k_BUFG                                          | fft_0/stage_128/p_0_in3_out                              |                                                     |                3 |             24 |
+|  clk_20k_BUFG                                          | fft_0/stage_64/p_0_in3_out                               |                                                     |                3 |             24 |
+|  clk_20k_BUFG                                          | fft_0/stage_16/p_0_in3_out                               |                                                     |                3 |             24 |
+|  clk_20k_BUFG                                          | fft_0/stage_32/p_0_in3_out                               |                                                     |                3 |             24 |
+|  JB0_OBUF                                              |                                                          |                                                     |                4 |             24 |
+|  clk_20k_BUFG                                          | fft_0/stage_8/p_0_in3_out                                |                                                     |                3 |             24 |
+|  clk_20k_BUFG                                          | fft_0/stage_2/stage                                      |                                                     |                4 |             24 |
+|  clk_IBUF_BUFG                                         |                                                          | JB0_OBUF                                            |                3 |             24 |
+|  clk_20k_BUFG                                          | fft_0/stage_2/m_i[5]_i_1_n_0                             |                                                     |                5 |             24 |
+| ~mic/JB3_OBUF                                          |                                                          |                                                     |                4 |             24 |
+|  clk_IBUF_BUFG                                         | user_interface/x_point_display[6]_i_1_n_0                |                                                     |                7 |             26 |
+|  clk_20k_BUFG                                          | fft_0/stage_128/b_started1                               |                                                     |                4 |             32 |
+|  clk_20k_BUFG                                          | fft_0/stage_64/b_started1                                |                                                     |                2 |             32 |
+|  clk_20k_BUFG                                          | fft_0/stage_32/b_started1                                |                                                     |                2 |             32 |
+|  clk_20k_BUFG                                          | fft_0/stage_16/b_started1                                |                                                     |                2 |             32 |
+|  clk_20k_BUFG                                          | fft_0/stage_8/b_started1                                 |                                                     |                2 |             32 |
+|  clk_20k_BUFG                                          | fft_0/stage_512/wait_for_sync0                           |                                                     |                6 |             32 |
+| ~clock_6p25M_BUFG                                      |                                                          | oled/frame_counter[16]_i_1_n_0                      |                5 |             34 |
+|  clk_20k_BUFG                                          | fft_0/stage_1024/wait_for_sync0                          |                                                     |                5 |             36 |
+| ~clock_6p25M_BUFG                                      | oled/delay[0]_i_1_n_0                                    |                                                     |                5 |             40 |
+|  clk_20k_BUFG                                          | fft_0/stage_4/p_0_in                                     |                                                     |                8 |             56 |
+|  clk_IBUF_BUFG                                         |                                                          | nolabel_line178/three_sec_counter[31]_i_1_n_0       |                8 |             62 |
+|  clk_IBUF_BUFG                                         |                                                          | clear                                               |                8 |             64 |
+|  clk_IBUF_BUFG                                         |                                                          | user_interface/clock_90pix/clear                    |                8 |             64 |
+|  clk_IBUF_BUFG                                         | user_interface/highscore                                 |                                                     |               13 |             64 |
+|  clk_IBUF_BUFG                                         |                                                          | user_interface/score_display/slow_clock_960Hz/clear |                8 |             64 |
+|  clk_IBUF_BUFG                                         |                                                          | slow_clock_6p25MHz/counter_32bits[0]_i_1_n_0        |                8 |             64 |
+|  clk_IBUF_BUFG                                         | user_interface/dbCount[31]_i_1_n_0                       |                                                     |               12 |             64 |
+|  clk_IBUF_BUFG                                         |                                                          | twentykhz/clear                                     |                8 |             64 |
+|  clk_IBUF_BUFG                                         | user_interface/shape_a1319_out                           | user_interface/finishGameCounter[31]_i_1_n_0        |                9 |             64 |
+|  clk_IBUF_BUFG                                         | user_interface/shape_a1319_out                           | user_interface/drop_counter[0]_i_1_n_0              |                8 |             64 |
+|  clk_IBUF_BUFG                                         | twentykhz/CEA2                                           | twentykhz/j_reg[0]                                  |                9 |             64 |
+| ~clock_6p25M_BUFG                                      | oled/state                                               |                                                     |                8 |             64 |
+| ~clock_6p25M_BUFG                                      |                                                          | oled/spi_word[39]_i_1_n_0                           |               14 |             90 |
+|  clk_IBUF_BUFG                                         | user_interface/shape_a1319_out                           |                                                     |               19 |            102 |
+|  color_data_reg[15]_i_1_n_0                            |                                                          |                                                     |               82 |            288 |
+|  clk_IBUF_BUFG                                         |                                                          |                                                     |              123 |            512 |
+|  clk_20k_BUFG                                          |                                                          |                                                     |              940 |           8038 |
++--------------------------------------------------------+----------------------------------------------------------+-----------------------------------------------------+------------------+----------------+
+
+
